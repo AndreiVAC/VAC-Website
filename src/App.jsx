@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Card from "./Card";
+import SignUpEmployee from "./SignUpEmployee";
 
 function App() {
 
-  const [backendData, setBackendData] = useState([{}])
+  const [backendData, setBackendData] = useState([])
 
   useEffect(() => {
     fetch("/api").then(
@@ -17,15 +17,10 @@ function App() {
 
   return (
     <>
-    {/*backendData.users.map((user, i) => (
-        <p key = {i}>{user}</p>
-    ))
-    Randomly stops working, idk y, check browser inspect
-    */}
-      
-      <h1>{backendData.users}</h1>
+      {backendData? ( backendData
+  ) : (console.log("no backend data."))}
       <h1></h1>
-      <Card></Card>
+      <SignUpEmployee></SignUpEmployee>
     </>
   );
 }
