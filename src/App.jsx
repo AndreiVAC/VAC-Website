@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import SignUpEmployee from "./SignUpEmployee";
+import SignUpEmployee from "./SignUpAdministrator";
 
 function App() {
 

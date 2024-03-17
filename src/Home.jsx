@@ -1,6 +1,5 @@
 import React from 'react';
 import homeImage from './assets/image-home.png';
-import icon from './assets/icon.png'
 import Header from './Header.jsx'
 
 function Home() {

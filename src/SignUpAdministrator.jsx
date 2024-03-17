@@ -2,8 +2,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { useEffect, useState } from "react";
 import icon from './assets/icon.png';
-import image_sue from './assets/image-sue.png'
+import image_sue from './assets/image-sua.png'
 import Header from './Header.jsx'
+
+
 
 function SignUpEmployee() {
   let [username, setUsername] = useState("")
@@ -52,20 +54,20 @@ function SignUpEmployee() {
       </Helmet>
       <Header></Header>
       <div className='sign-up'>
-        <div className='sign-up-form'>
+        <form className='sign-up-form'>
           <h1>Sign Up as an Organization</h1>
           <label>Name:</label>
-          <input type="text" value={username} onChange={handleUserChange} />
+          <input type="text" value={username} onChange={handleUserChange} placeholder="Enter your name"/>
           <label>Password:</label>
-          <input type="password" value={password} onChange={handlePassChange} />
+          <input type="password" value={password} onChange={handlePassChange} placeholder="Enter your password" />
           <label>E-mail Address:</label>
-          <input type="email" value={email} onChange={handleEmailChange} />
+          <input type="email" value={email} onChange={handleEmailChange} placeholder="Enter your email" />
           <label>Organization Name:</label>
-          <input type="text" value={orgName} onChange={handleOrgChange} />
+          <input type="text" value={orgName} onChange={handleOrgChange} placeholder="Enter your Organization Name"/>
           <label>Headquarter Address:</label>
-          <input type="text" value={hqAddress} onChange={handleHQChange} />
+          <input type="text" value={hqAddress} onChange={handleHQChange} placeholder="Enter your HQ Address"/>
           <button onClick={loginPressed}>Submit</button>
-        </div>
+        </form>
         <div className='hide-dots-mobile'>
         <img src={image_sue} alt = "Sign Up Image"></img>
         <span className='dot3'></span>

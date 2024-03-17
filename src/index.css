@@ -1,6 +1,7 @@
 @font-face {
   font-family: Inter;
-  src: url(C:\Users\Calculator\Desktop\website\React_Team_Website\fonts\Inter.ttf);
+  src: url("..\fonts\Inter.ttf");
+  src: url('..\fonts\Inter.ttf') format('truetype')
 }
 
 * {
@@ -163,8 +164,8 @@
   position: absolute;
   left: 5%;
   top: 15%;
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
   background-color: #001AFF;
   border-radius: 50%;
   display: inline-block;
@@ -264,7 +265,156 @@
   overflow: clip;
 }
 
+.sua-dot2 {
+    position: relative;
+    right: 82.5%;
+    bottom: 90%;
+    height: 75px;
+    width: 75px;
+    background-color: #001AFF;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: clip;
+    z-index: -1;
+}
 
+.sua-dot5 {
+  position: relative;
+  right:7.5%;
+  bottom: 60%;
+  height: 75px;
+  width: 75px;
+  background-color: #001AFF;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: clip;
+  z-index: -1;
+}
+
+.sua-dot1 {
+  position: relative;
+  right:45%;
+  top: 25%;
+  height: 50px;
+  width: 50px;
+  background-color: #001AFF;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: clip;
+  z-index: -1;
+}
+
+.sua-dot3 {
+  position: relative;
+  left: 90vw;
+  top: 0px;
+  height: 100px;
+  width: 100px;
+  background-color: #001AFF;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: clip;
+  z-index: -1;
+}
+
+
+.sua-dot6 {
+  position: relative;
+  left: 50vw;
+  bottom: 10vh;
+  height: 100px;
+  width: 100px;
+  background-color: #001AFF;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: clip;
+  z-index: -1;
+}
+
+.sue-dot3 {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  left:87.5%;
+  bottom:82.5%;
+  background-color: #001AFF;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: -1;
+  overflow: clip;
+}
+
+.sue-dot4 {
+  position: relative;
+  height: 75px;
+  width: 75px;
+  left:30vw;
+  bottom:70vh;
+  background-color: #001AFF;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: -1;
+  overflow: clip;
+}
+
+.link-text{
+  font-family: Inter;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 650;
+  line-height: normal;
+  padding-bottom: 30px;
+}
+
+
+.link-text br{
+  display:block;
+  margin-bottom:16px;
+}
+
+.dropdown {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+ .dropbtn {
+  margin: 0px !important;
+  width: 250px !important;
+  background-color: #253bff !important;
+  color: white !important;
+  padding: 16px !important;
+  font-size: 16px !important;
+  border: none !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-bottom: 5px !important;
+  padding-top: 5px !important;
+  cursor:default !important;
+}
+
+.dropdown-content {
+  width: 250px !important;
+  display: none !important;
+  position: absolute !important;
+  background-color: #f1f1f1 !important;
+  min-width: 160px !important;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) !important;
+  z-index: 1 !important;
+}
+
+.dropdown-content a {
+  color: black !important;
+  padding: 12px 16px !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+.dropdown-content a:hover {background-color: #ddd !important;}
+
+.dropdown:hover .dropdown-content {display: block !important;}
+
+.dropdown:hover .dropbtn {background-color: #9ea7ff !important;} 
 
 @media screen and (max-width: 900px) {
   .sign-up-form {

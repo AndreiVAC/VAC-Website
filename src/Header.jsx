@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Helmet from 'react-helmet';
 import icon from './assets/icon.png';
 import { useNavigate } from "react-router-dom";
 
@@ -14,6 +15,10 @@ function Header() {
         navigate('/log-in')
     }
     return (
+        <>
+        <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      </Helmet>
         <header className="header">
             <button className="hidden-button"  onClick={goHome} >
                 <div className='header-logo'>
@@ -26,6 +31,7 @@ function Header() {
                 <button onClick={goLogIn}>Log In</button>
             </div>
         </header>
+        </>
     )
 }
 
