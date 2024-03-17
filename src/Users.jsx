@@ -7,7 +7,7 @@ function Users() {
     const [backendData, setBackendData] = useState([])
 
   useEffect(() => {
-    fetch("/api").then(
+    fetch("http://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/api").then(
       response => response.json()
     ).then(
       data => {

@@ -24,7 +24,7 @@ function SignUpEmployee() {
       },
       body: serializedBody
     };
-    fetch("/api/newuser/", fetchOptions);
+    fetch("http://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/api/newuser/", fetchOptions);
     goSignUpSuccess();
   }
 
