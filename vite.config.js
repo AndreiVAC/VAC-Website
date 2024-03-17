@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'http://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/api',
         changeOrigin: true,
       },
     },
