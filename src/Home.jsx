@@ -6,6 +6,7 @@ function Home() {
     return (
         <div>
             <Header></Header>
+            <title>Team Finder</title>
             <div class="home-flex">
                 <div class="home-text">
                 <h1>Team Finder  </h1>

@@ -1,10 +1,54 @@
 import React from 'react'
 import Header from './Header.jsx';
+import { useEffect, useState } from "react";
 import loginImage from './assets/image-login.png';
+import { useNavigate } from "react-router-dom";
 
 //8:54 - 9:38
 
 function LogIn() {
+    let [password, setPassword] = useState("")
+    let [email, setEmail] = useState("")
+    let [valid, setValid] = useState(null)
+    const navigate = useNavigate();
+    const goSkills = () => {
+        navigate('/skills');
+    }
+    const goHome = () => {
+        navigate('/');
+    }
+    function handlePassChange(e) {
+        setPassword(e.target.value);
+      }
+    
+      function handleEmailChange(e) {
+        setEmail(e.target.value);
+      }
+    async function loginPressed(event) {
+        event.preventDefault();
+        const serializedBody = JSON.stringify({pass: password, mail: email});
+        const fetchOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: serializedBody
+        };
+        fetch("/api/login/", fetchOptions).then(
+            response => response.json()
+        ).then(
+            data =>{
+                console.log(data);
+                if (data){
+                    goSkills();
+                }
+                else{
+                    goHome();
+                }
+            }
+        )
+      }
+    
     return (
         <div>
             <Header></Header>
@@ -17,11 +61,11 @@ function LogIn() {
                 </div>
                 <form class="sign-up-form">
                     <h1>Log into your Team Finder account</h1>
-                    <label for="email">Username or Email:</label>
-                    <input type="email" id="name" title="enter your name" placeholder="Enter your name / email." />
+                    <label for="email">Email:</label>
+                    <input type="email" value = {email} onChange={handleEmailChange} id="name" title="enter your email" placeholder="Enter your email." />
                     <label for="password">Password:</label>
-                    <input type="password" id="password" title="enter your password" placeholder="Enter your password" />
-                    <button>Log In</button>
+                    <input type="password" id="password" value = {password}  onChange ={handlePassChange} title="enter your password" placeholder="Enter your password" />
+                    <button onClick={loginPressed}>Log In</button>
                 </form>
             </div>
             <div className='hide-dots-mobile'>

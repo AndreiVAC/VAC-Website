@@ -1,6 +1,7 @@
 import React from 'react';
-import { useEffect, useState } from "react";
 import Header from './Header.jsx';
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 // 10:05 - 10:36
 
 
@@ -12,6 +13,13 @@ function copyToClipboard() {
 
 function SignedUp() {
     let [employeeURL, setEmployeeURL] = useState("https://team-finder.com/join-organization/kDFgkrDDxEn32ZXE343")
+    const navigate = useNavigate();
+    const goSkills = () => {
+        navigate('/skills');
+    }
+    const goEmployee = () => {
+        navigate('/join-organization');
+    }
     return (
         <div>
             <Header></Header>
@@ -33,7 +41,8 @@ function SignedUp() {
                 <div className="sign-up-form">
                     <h1>URL: </h1>
                     <input onClick={copyToClipboard} type="text" id="linkInput" value={employeeURL}></input>
-                    <button>Go To Dashboard</button>
+                    <button onClick={goSkills}>Go To Dashboard</button>
+                    <button onClick={goEmployee}>Test Employee Sign In</button>
                 </div>
             </div>
         </div>

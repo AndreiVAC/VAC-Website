@@ -1,9 +1,16 @@
 import React from 'react'
 import icon from './assets/icon.png';
 import { useNavigate } from "react-router-dom";
+import userIcon from "./assets/user.png";
 
 // 10:36 - 11:10
 function Skills() {
+    var sidebar = false
+    function toggleSidebar(event) {
+        event.preventDefault();
+        sidebar = !sidebar;
+        console.log(sidebar);
+    }
     const navigate = useNavigate();
     const goHome = () => {
         navigate('/');
@@ -50,6 +57,17 @@ function Skills() {
                     <button>UI Design</button>
                     <button>FrontEnd Development</button>
                 </div>
+                <form className='sidebar'>
+                    <div className='sidebar-horizontal'>
+                        <img src = {userIcon}></img>
+                        <h1>User</h1>
+                    </div>
+                    <button>Organization -{'>'}</button>
+                    <button>Departments -{'>'}</button>
+                    <button>Skills -{'>'}</button>
+                    <button>Projects -{'>'}</button>
+                    <button className='sidebar-blue-button' onClick={goHome}>Log Out</button>
+                </form>
             </div>
         </div>
     )

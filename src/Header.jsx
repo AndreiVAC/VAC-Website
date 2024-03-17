@@ -19,6 +19,7 @@ function Header() {
         <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Helmet>
+      <title>Team Finder</title>
         <header className="header">
             <button className="hidden-button"  onClick={goHome} >
                 <div className='header-logo'>

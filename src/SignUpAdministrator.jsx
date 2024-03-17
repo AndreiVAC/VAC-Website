@@ -1,11 +1,8 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { useEffect, useState } from "react";
-import icon from './assets/icon.png';
 import image_sue from './assets/image-sua.png'
+import { useNavigate } from "react-router-dom";
 import Header from './Header.jsx'
-
-
 
 function SignUpEmployee() {
   let [username, setUsername] = useState("")
@@ -13,6 +10,10 @@ function SignUpEmployee() {
   let [email, setEmail] = useState("")
   let [orgName, setOrgName] = useState("")
   let [hqAddress, setHqAddress] = useState("")
+  const navigate = useNavigate();
+  const goSignUpSuccess = () => {
+    navigate('/sign-up-successful/');
+  }
   async function loginPressed(event) {
     event.preventDefault();
     const serializedBody = JSON.stringify({ name: username, pass: password, mail: email, organization: orgName, address: hqAddress });
@@ -24,6 +25,7 @@ function SignUpEmployee() {
       body: serializedBody
     };
     fetch("/api/newuser/", fetchOptions);
+    goSignUpSuccess();
   }
 
   //bidirectional binding react
@@ -49,9 +51,6 @@ function SignUpEmployee() {
 
   return (
     <div>
-      <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      </Helmet>
       <Header></Header>
       <div className='sign-up'>
         <form className='sign-up-form'>

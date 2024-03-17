@@ -10,6 +10,8 @@ import LogIn from './LogIn.jsx';
 import JoinURL from './JoinURL.jsx';
 import SignedUp from './SignedUp.jsx';
 import Skills from './Skills.jsx';
+// 7:32 8:47
+
 
 const router = createBrowserRouter([
   { path : "/", element: <Home />},
