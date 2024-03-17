@@ -22,7 +22,7 @@ function JoinURL() {
           },
           body: serializedBody
         };
-        fetch("http://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/api/newuser/", fetchOptions);
+        fetch("http://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/newuser/", fetchOptions);
       }
 
       function handleUserChange(e) {

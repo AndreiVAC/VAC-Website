@@ -34,7 +34,7 @@ function LogIn() {
           },
           body: serializedBody
         };
-        fetch("http://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/api/login/", fetchOptions).then(
+        fetch("http://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/login", fetchOptions).then(
             response => response.json()
         ).then(
             data =>{
