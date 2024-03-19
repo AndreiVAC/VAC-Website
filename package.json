@@ -2,7 +2,7 @@
   "name": "react-team-website",
   "private": true,
   "version": "0.0.0",
-  "proxy": "http://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/",
+  "proxy": "https://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
