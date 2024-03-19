@@ -477,6 +477,35 @@
   line-height: normal;
 }
 
+.valid {
+  color: rgb(34, 206, 0) !important;
+  font-family: Inter !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  max-width: 400px !important;
+  margin-top: 24px !important;
+}
+
+.invalid {
+  color: rgb(255, 60, 0) !important;
+  font-family: Inter !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  max-width: 400px !important;
+  margin-top: 24px!important;
+}
+
+.disabled_button {
+  background-color: gray !important;
+}
+
+.disabled_button:hover{
+  cursor: default !important;
+}
 
 
 @media screen and (max-width: 900px) {

@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 function LogIn() {
     let [password, setPassword] = useState("")
     let [email, setEmail] = useState("")
-    let [valid, setValid] = useState(null)
+    let [wrongCredentials, setWrongCredentials] = useState(false)
     const navigate = useNavigate();
     const goSkills = () => {
         navigate('/skills');
@@ -34,7 +34,7 @@ function LogIn() {
           },
           body: serializedBody
         };
-        fetch("https://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/login", fetchOptions).then(
+        fetch("http://atc-2024-valve-anti-cheat-be-linux-web-app.azurewebsites.net/login", fetchOptions).then(
             response => response.json()
         ).then(
             data =>{
@@ -43,7 +43,7 @@ function LogIn() {
                     goSkills();
                 }
                 else{
-                    goHome();
+                    setWrongCredentials(true)
                 }
             }
         )
@@ -66,6 +66,7 @@ function LogIn() {
                     <label for="password">Password:</label>
                     <input type="password" id="password" value = {password}  onChange ={handlePassChange} title="enter your password" placeholder="Enter your password" />
                     <button onClick={loginPressed}>Log In</button>
+                    {wrongCredentials && <span className='invalid'>Authentication failed. Please ensure your email and password are correct.</span>}
                 </form>
             </div>
             <div className='hide-dots-mobile'>
